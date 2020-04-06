@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+app.use(express.json({extended: true}));
+
 const PORT = config.get('port') || 5000;
 
 async function start() {
